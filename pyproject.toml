@@ -1,0 +1,41 @@
+[tool.pyright]
+reportUnknownLambdaType = false
+reportMissingTypeStubs = false
+reportUnknownMemberType = false
+exclude = ["__pypackages__"]
+
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest~=6.2",
+    "pytest-cov~=2.12",
+    "pytest-watch~=4.2",
+    "pytest-testmon~=1.2",
+    "pytest-json-report~=1.4",
+    "bandit>=1.7.4",
+]
+
+[project]
+name = "mfamt_db_dump"
+version = "0.1.0"
+description = "mfamt_db_dump"
+authors = [
+    {name = "pat laplante", email = "laplante.patrick@gmail.com"},
+]
+dependencies = [
+    "setuptools>=65.3.0",
+    "panda>=0.3.1",
+    "pandas>=1.5.3",
+    "dataclass-wizard>=0.22.2",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+[project.optional-dependencies]
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm.scripts]
+cov = {shell = "pdm run pytest --cov=. --cov-report=xml tests"}

@@ -1,0 +1,48 @@
+{
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/__pypackages__/3.11/lib"
+    ],
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/__pypackages__/3.11/lib"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.testing.pytestPath": "${workspaceFolder}/__pypackages__/3.11/bin/pytest",
+    "python.testing.pytestArgs": ["--ignore=__pypackages__", "-s", "tests", "--cov=.", "--cov-report=xml"],
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.banditArgs": ["-c", ".bandit.yaml"],
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/src:${env:PYTHONPATH}"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src:${env:PYTHONPATH}"
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/src;${env:PYTHONPATH}"
+    },
+    "files.exclude": {
+        "__pycache__": true,
+        "__pypackages__": true,
+        ".coverage": true,
+        ".pytest_cache": true,
+        ".repo": true,
+        ".testmondata": true,
+        ".webpack": true,
+        "**/__pycache__": true,
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.venv/**": true,
+        "coverage.xml": true,
+        "node_modules": true,
+        "out": true,
+        "pdm.lock": true
+    },
+    "pythonTestExplorer.testFramework": "pytest",
+    "AREPL.pythonPath": "/Users/pat/.asdf/shims/python",
+    "python.defaultInterpreterPath": "/Users/pat/.asdf/shims/python",
+}

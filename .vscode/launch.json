@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "pytest",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "-s",
+                "tests"
+            ],
+            "justMyCode": true,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/__pypackages__/3.10/lib"
+            }
+        }        
+    ]
+}
